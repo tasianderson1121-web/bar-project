@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink 墨染</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo-area">
+        <img src="img/Logo (2).jpg" alt="logo">
+        <h1 class="logo">Ink墨染</h1>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">首頁</a></li>
+        <li><a href="html/pages/softdrink.html">酒單</a></li>
+        <li><a href="html/pages/event.html">活動</a></li>
+        <li><a href="html/pages/aboutus.html">品牌故事</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+        <div class="search-container">
+            <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="搜尋酒款..."
+            autocomplete="off">
+            <button class="search-button" onclick="searchProduct()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="suggestBox" class="suggest-box"></div>
+        </div>
+        <a href="#" class="team-btn">組員介紹</a>
+        <a href="html/system/login.html" class="member-btn">會員登入</a>
+        <a href="html/system/cart.html" class="cart-btn">購物車</a>
+    </div>
+</nav>
+
+<section class="hero">
+
+    <!-- 左箭頭 -->
+    <button class="hero-btn left" onclick="prevSlide()">‹</button>
+
+    <!-- 圖片 -->
+    <div class="hero-bg active">
+        <img src="img/酒.jpg" alt="">
+    </div>
+
+    <div class="hero-bg">
+        <img src="img/酒2.jpg" alt="">
+    </div>
+
+    <div class="hero-bg">
+        <img src="img/酒4.png" alt="">
+    </div>
+
+    <!-- 文字 -->
+    <div class="hero-content active">
+        <h2>Sip The Night</h2>
+        <p>精品調酒與烈酒線上選購</p>
+
+        <a href="html/pages/softdrink.html" class="btn gold">前往選購</a>
+    </div>
+
+    <div class="hero-content">
+    <h2>Crafted for Every Moment</h2>
+    <p>為每個時刻精心調製的熱銷酒款</p>
+    </div>
+
+    <div class="hero-content ">
+    <h2>Become the Member</h2>
+    <p>加入內圈會員，解鎖專屬優惠與限定體驗</p>
+
+    <a href="html/system/login.html" class="btn gold">加入會員</a>
+</div>
+
+    <!-- 右箭頭 -->
+    <button class="hero-btn right" onclick="nextSlide()">›</button>
+
+    <!-- 圓點 -->
+    <div class="hero-dots">
+        <span class="dot active" onclick="goSlide(0)"></span>
+        <span class="dot" onclick="goSlide(1)"></span>
+        <span class="dot" onclick="goSlide(2)"></span>
+    </div>
+
+</section>
+<!-- 熱賣酒品 -->
+<section class="menu-section">
+
+    <h2 class="section-title">熱賣酒品</h2>
+    <p class="section-subtitle">
+        Best Sellers This Month
+    </p>
+
+    <div class="menu-container">
+
+        <!-- Old Fashioned -->
+        <a href="html/cocktail/old-fashion.html" class="menu-card">
+
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b" alt="Old Fashioned">
+
+            <h3>Old Fashioned</h3>
+
+            <p>
+                波本威士忌 × 苦精 × 橙皮<br>
+                經典永不退流行的紳士之選
+            </p>
+
+            <span>NT$350</span>
+        </a>
+
+        <!-- Negroni -->
+        <a href="html/cocktail/negroni.html" class="menu-card">
+
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87" alt="Negroni">
+
+            <h3>Negroni</h3>
+
+            <p>
+                琴酒 × 苦艾酒 × 金巴利<br>
+                苦甜平衡的義式經典調酒
+            </p>
+
+            <span>NT$360</span>
+        </a>
+
+        <!-- Whiskey Sour -->
+        <a href="html/cocktail/whisky-sour.html" class="menu-card">
+
+            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187" alt="Whiskey Sour">
+
+            <h3>Whiskey Sour</h3>
+
+            <p>
+                波本威士忌 × 檸檬 × 糖漿<br>
+                酸甜順口，入門首選
+            </p>
+
+            <span>NT$340</span>
+        </a>
+
+    </div>
+
+</section>
+<!-- MENU CTA -->
+<section class="menu-poster-section">
+
+    <div class="poster-text">
+
+        <p class="poster-tag">
+            FULL MENU
+        </p>
+
+        <h2>
+            Explore Our Collection
+        </h2>
+
+        <p>
+            從經典調酒到限量威士忌，
+            探索 Ink 墨染完整酒單。
+        </p>
+
+        <a href="html/pages/softdrink.html"
+           class="collection-btn">
+            更多商品
+        </a>
+
+    </div>
+
+    <div class="poster-image">
+        <img src="img/drink-menu-poster.png">
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- 品牌 -->
+        <div class="footer-brand">
+            <h2>Ink墨染</h2>
+            <p>Premium Spirits Online Store</p>
+            <p class="footer-slogan">
+                Sip The Night, Taste The Story.
+            </p>
+        </div>
+
+        <!-- 快速連結 -->
+        <div class="footer-links">
+            <h3>快速連結</h3>
+            <a href="index.html">首頁</a>
+            <a href="html/pages/softdrink.html">酒單</a>
+            <a href="html/pages/event.html">活動資訊</a>
+            <a href="html/pages/aboutus.html">品牌故事</a>
+        </div>
+
+        <!-- 聯絡資訊 -->
+        <div class="footer-info">
+            <h3>聯絡資訊</h3>
+            <p>📧 support@inkstore.com</p>
+            <p>📞 03-123-4567</p>
+            <p>🚚 全台快速配送</p>
+        </div>
+
+    </div>
+
+    <!-- 酒類警語 -->
+    <div class="footer-warning">
+        酒後不開車，安全有保障 ｜ 未滿十八歲禁止飲酒
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Ink墨染. All Rights Reserved.</p>
+    </div>
+</footer>
+<script>
+let index = 0;
+
+const slides = document.querySelectorAll(".hero-bg");
+const texts = document.querySelectorAll(".hero-content");
+const dots = document.querySelectorAll(".dot");
+
+function showSlide(i){
+    slides.forEach(s => s.classList.remove("active"));
+    texts.forEach(t => t.classList.remove("active"));
+    dots.forEach(d => d.classList.remove("active"));
+
+    slides[i].classList.add("active");
+    texts[i].classList.add("active");
+    dots[i].classList.add("active");
+
+    index = i;
+}
+
+function nextSlide(){
+    let i = (index + 1) % slides.length;
+    showSlide(i);
+}
+
+function prevSlide(){
+    let i = (index - 1 + slides.length) % slides.length;
+    showSlide(i);
+}
+
+function goSlide(i){
+    showSlide(i);
+}
+</script>
+<script src="Js/user.js"></script>
+<script src="Js/auth.js"></script>
+
+<script src="Js/product.js"></script>
+<script src="Js/search.js"></script>
+
+<script src="Js/navbar.js"></script>
+</body>
+</html>

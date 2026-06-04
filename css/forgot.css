@@ -1,0 +1,161 @@
+/* =========================
+   FORGOT / RESET PASSWORD
+   Ink墨染風格統一
+========================= */
+
+/* =========================
+   SECTION
+========================= */
+
+.forgot-section{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:120px 20px;
+}
+
+/* =========================
+   BOX
+========================= */
+
+.forgot-box{
+    width:420px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:28px;
+
+    padding:50px;
+
+    text-align:center;
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   TEXT STYLE
+========================= */
+
+.tag{
+    color:#d4af37;
+
+    letter-spacing:3px;
+
+    font-size:12px;
+
+    margin-bottom:12px;
+}
+
+.forgot-box h2{
+    font-family:'Cinzel', serif;
+
+    font-size:38px;
+
+    margin-bottom:12px;
+}
+
+.subtitle{
+    color:#aaa;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.forgot-box input{
+    width:100%;
+
+    padding:14px 16px;
+
+    margin:10px 0;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    background:#111;
+
+    color:#fff;
+
+    font-size:14px;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+.forgot-box input:focus{
+    border-color:#d4af37;
+
+    box-shadow:0 0 15px rgba(212,175,55,0.2);
+}
+
+/* =========================
+   MAIN BUTTON
+========================= */
+
+.login-btn{
+    width:100%;
+
+    margin-top:15px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#d4af37;
+
+    color:#000;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    display:block;
+    text-decoration:none;
+}
+
+.login-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(212,175,55,0.35);
+}
+
+/* =========================
+   BACK LINK
+========================= */
+
+.back-link{
+    display:block;
+
+    margin-top:18px;
+
+    color:#aaa;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    transition:0.3s;
+}
+
+.back-link:hover{
+    color:#d4af37;
+}

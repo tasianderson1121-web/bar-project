@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Ink墨染</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/navbar.css">
+<link rel="stylesheet" href="../../css/softdrink.css">
+<link rel="stylesheet" href="../../css/footer.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo-area">
+        <img src="../../img/Logo (2).jpg" alt="logo">
+        <h1 class="logo">Ink墨染</h1>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../../index.html" class="active">首頁</a></li>
+        <li><a href="softdrink.html">酒單</a></li>
+        <li><a href="event.html">活動</a></li>
+        <li><a href="aboutus.html">品牌故事</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+        <div class="search-container">
+            <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="搜尋酒款..."
+            autocomplete="off">
+            <button class="search-button" onclick="searchProduct()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="suggestBox" class="suggest-box"></div>
+        </div>
+        <a href="#" class="team-btn">組員介紹</a>
+        <a href="../system/login.html" class="member-btn">會員登入</a>
+        <a href="../system/cart.html" class="cart-btn">購物車</a>
+    </div>
+</nav>
+<!-- HERO -->
+<header class="menu-hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Premium Spirits</h1>
+    <p>Explore premium selections curated for every occasion.</p>
+  </div>
+</header>
+
+<!-- CATEGORY -->
+<section class="category-bar">
+
+  <a href="softdrink.html" class="category ">
+    軟性飲料
+  </a>
+
+  <a href="beer.html" class="category">
+    啤酒
+  </a>
+
+  <a href="spirit.html" class="category active">
+    基酒
+  </a>
+
+  <a href="liquor.html" class="category">
+    烈酒
+  </a>
+
+  <a href="cocktail.html" class="category">
+    經典調酒
+  </a>
+  
+</section>
+
+<section class="grid">
+
+  <!-- Vodka -->
+  <a class="card" href="../spirit/vodka.html">
+    <img src="../../img/vodka3.jpg">
+    <div class="card-content">
+      <h3>Vodka</h3>
+      <p>純淨烈酒基底，口感乾淨俐落，適合各式調酒。</p>
+      <div class="product-bottom"><span>$280</span></div>
+    </div>
+  </a>
+
+  <!-- Gin -->
+  <a class="card" href="../spirit/gin.html">
+    <img src="../../img/gin.jpg">
+    <div class="card-content">
+      <h3>Gin</h3>
+      <p>杜松子香氣明顯，經典調酒核心基酒。</p>
+      <div class="product-bottom"><span>$300</span></div>
+    </div>
+  </a>
+
+  <!-- Rum -->
+  <a class="card" href="../spirit/rum.html">
+    <img src="../../img/rum.jpg">
+    <div class="card-content">
+      <h3>Rum</h3>
+      <p>帶有焦糖與熱帶水果香氣，風味柔和。</p>
+      <div class="product-bottom"><span>$320</span></div>
+    </div>
+  </a>
+
+  <!-- Tequila -->
+  <a class="card" href="../spirit/tequila.html">
+    <img src="../../img/tequila.jpg">
+    <div class="card-content">
+      <h3>Tequila</h3>
+      <p>草本與柑橘香氣強烈，風味直接有力。</p>
+      <div class="product-bottom"><span>$350</span></div>
+    </div>
+  </a>
+
+    <!-- Bourbon -->
+  <a class="card" href="../spirit/bourbon.html">
+    <img src="../../img/bourbon.jpg">
+    <div class="card-content">
+      <h3>Bourbon</h3>
+      <p>波本威士忌帶有香草與焦糖香氣，口感圓潤厚實。</p>
+      <div class="product-bottom"><span>$420</span></div>
+    </div>
+  </a>
+
+  <!-- Brandy -->
+  <a class="card" href="../spirit/brandy.html">
+    <img src="../../img/brandy2.jpg">
+    <div class="card-content">
+      <h3>Brandy</h3>
+      <p>果香濃郁，口感圓潤柔順。</p>
+      <div class="product-bottom"><span>$450</span></div>
+    </div>
+  </a>
+
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- 品牌 -->
+        <div class="footer-brand">
+            <h2>Ink墨染</h2>
+            <p>Premium Spirits Online Store</p>
+            <p class="footer-slogan">
+                Sip The Night, Taste The Story.
+            </p>
+        </div>
+
+        <!-- 快速連結 -->
+        <div class="footer-links">
+            <h3>快速連結</h3>
+            <a href="../../index.html">首頁</a>
+            <a href="spirit.html">酒單</a>
+            <a href="event.html">活動資訊</a>
+            <a href="aboutus.html">品牌故事</a>
+        </div>
+
+        <!-- 聯絡資訊 -->
+        <div class="footer-info">
+            <h3>聯絡資訊</h3>
+            <p>📧 support@inkstore.com</p>
+            <p>📞 03-123-4567</p>
+            <p>🚚 全台快速配送</p>
+        </div>
+
+    </div>
+
+    <!-- 酒類警語 -->
+    <div class="footer-warning">
+        酒後不開車，安全有保障 ｜ 未滿十八歲禁止飲酒
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Ink墨染. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="../../Js/user.js"></script>
+<script src="../../Js/auth.js"></script>
+
+<script src="../../Js/product.js"></script>
+<script src="../../Js/search.js"></script>
+
+<script src="../../Js/navbar.js"></script>
+</body>
+</html>

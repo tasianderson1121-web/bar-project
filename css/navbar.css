@@ -1,0 +1,299 @@
+/* =========================
+   NAVBAR BASE
+========================= */
+
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:14px 6%;
+
+  background:rgba(31,25,21,0.85);
+  backdrop-filter: blur(12px);
+
+  border-bottom:1px solid rgba(214,176,106,0.18);
+
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9999;
+
+  box-sizing:border-box;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  flex:0 0 auto;
+}
+
+.logo-area img{
+  width:46px;
+  height:46px;
+
+  border-radius:50%;
+  border:2px solid #d6b06a;
+
+  object-fit:cover;
+}
+
+.logo-area h1.logo{
+  font-family:'Cinzel','Noto Serif TC',serif;
+  font-size:22px;
+  font-weight:600;
+  color:#d6b06a;
+  margin:0;
+  letter-spacing:1px;
+}
+
+/* =========================
+   NAV LINKS（中間）
+========================= */
+
+.nav-links{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:28px;
+
+  list-style:none;
+  margin:0;
+  padding:0;
+
+  flex:1;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#f5f5f5;
+
+  font-size:15px;
+  white-space:nowrap;
+
+  position:relative;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+  height:1px;
+
+  background:#d6b06a;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#d6b06a;
+}
+
+.nav-links a:hover::after{
+  width:100%;
+}
+
+/* =========================
+   RIGHT SIDE（關鍵修正）
+========================= */
+
+.suggest-box{
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+
+    width: 100%;
+
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 8px;
+
+    display: none;
+    z-index: 9999;
+
+    overflow: hidden;
+}
+
+.suggest-item{
+    padding: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.suggest-item:hover{
+    background: #222;
+}
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  flex:0 0 auto;
+  white-space:nowrap;
+
+  margin-left:auto; /* ⭐關鍵：推到最右 */
+}
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 4px 8px;
+  width: 220px;
+  transition: 0.3s;
+}
+
+.search-container:focus-within {
+  border-color: #d6b06a;
+  box-shadow: 0 0 6px rgba(214,176,106,0.4);
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 6px;
+  width: 100%;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-input::placeholder {
+  color: #888;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+  transition: 0.2s;
+}
+
+.search-button:hover {
+  color: #d6b06a;
+}
+
+.suggest-box{
+  position:absolute;
+  top:45px;
+  left:0;
+  width:220px;
+
+  background:#111;
+  border:1px solid rgba(214,176,106,0.2);
+  border-radius:10px;
+
+  display:none;
+  flex-direction:column;
+
+  z-index:9999;
+}
+
+.suggest-item{
+  padding:10px;
+  cursor:pointer;
+  color:#fff;
+  font-size:14px;
+}
+
+.suggest-item:hover{
+  background:#d6b06a;
+  color:#111;
+}
+/* =========================
+   BUTTONS
+========================= */
+
+.nav-actions a{
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+
+  padding:10px 16px;
+  border-radius:30px;
+
+  transition:0.2s;
+}
+
+/* 購物車 */
+.cart-btn{
+  background:#d6b06a;
+  color:#1a1410;
+}
+
+.cart-btn:hover{
+  background:#c49a55;
+}
+
+/* 組員 */
+.team-btn{
+  border:1px solid rgba(214,176,106,0.3);
+  color:#f5f5f5;
+  background:rgba(255,255,255,0.05);
+}
+
+.team-btn:hover{
+  border-color:#d6b06a;
+  color:#d6b06a;
+}
+
+/* 會員 */
+.member-btn{
+  border:1px solid #d6b06a;
+  color:#d6b06a;
+  background:transparent;
+}
+
+.member-btn:hover{
+  background:#d6b06a;
+  color:#1a1410;
+}
+
+/* =========================
+   BODY OFFSET（避免被 navbar 蓋住）
+========================= */
+
+body{
+  margin:0;
+  padding-top:82px;
+
+  background:#1f1915;
+  color:#f5f5f5;
+}
+
+/* =========================
+   RWD（手機）
+========================= */
+
+@media(max-width:768px){
+
+  .nav-links{
+    display:none; /* 先簡化（之後可做漢堡選單） */
+  }
+
+  .nav-search input{
+    width:120px;
+  }
+
+  .nav-actions a{
+    padding:8px 12px;
+    font-size:12px;
+  }
+}

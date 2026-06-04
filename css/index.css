@@ -1,0 +1,602 @@
+:root{
+  --bg:#1f1915;
+  --card:#2a211c;
+  --gold:#d6b06a;
+  --text:#f5f5f5;
+  --muted:#c8b8a8;
+}
+
+/* =====================
+   BASE
+===================== */
+
+body{
+  margin:0;
+  font-family:'Inter', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+
+/* =====================
+   HERO BASE
+===================== */
+
+.hero{
+  position:relative;
+
+  width:100%;
+  height:70vh;
+  min-height:520px;
+
+  margin:0;
+  padding:0;
+
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  color:white;
+}
+
+/* =====================
+   BACKGROUND
+===================== */
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+
+  opacity:0;
+  transition:opacity 1.5s ease-in-out;
+}
+
+.hero-bg.active{
+  opacity:1;
+}
+
+.hero-bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* =====================
+   OVERLAY（🔥已修）
+   👉 不再擋點擊
+===================== */
+
+/* ⭐讓所有 hero 內容層都不會擋 click */
+.hero-content{
+  pointer-events:none;
+}
+
+/* ⭐只有 active 那一頁可以操作 */
+.hero-content.active{
+  pointer-events:auto;
+}
+
+/* ⭐按鈕強制最上層可點 */
+.btn{
+  position:relative;
+  z-index:999;
+  pointer-events:auto;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.55)
+  );
+
+  z-index:1;
+
+  pointer-events:none; /* ⭐⭐⭐關鍵修正 */
+}
+
+/* =====================
+   CONTENT
+===================== */
+
+.hero-content{
+  position:absolute;
+  z-index:2;
+
+  opacity:0;
+  transition:opacity 1s ease;
+
+  max-width:700px;
+  padding:0;
+}
+
+.hero-content.active{
+  opacity:1;
+}
+
+/* =====================
+   TEXT
+===================== */
+
+.hero-content h2{
+  font-size:72px;
+  color:white;
+  margin-bottom:16px;
+  letter-spacing:3px;
+}
+
+.hero-content p{
+  font-size:18px;
+  color:rgba(255,255,255,0.75);
+  margin-bottom:28px;
+  line-height:1.8;
+}
+
+.hero-tag{
+  display:block;
+  color:#d6b06a;
+  letter-spacing:4px;
+  font-size:13px;
+  margin-bottom:14px;
+}
+
+/* =====================
+   BUTTON FIX（🔥關鍵）
+   👉 保證可點
+===================== */
+
+.btn{
+  position:relative;
+  z-index:10;
+
+  display:inline-block;
+  padding:12px 28px;
+
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:500;
+
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+/* 金色按鈕 */
+.btn.gold{
+  background:#d6b06a;
+  color:#1a1410;
+  border:1px solid rgba(255,255,255,0.12);
+  margin-top:20px;
+}
+
+.btn.gold:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(214,176,106,0.35);
+}
+
+/* =====================
+   ARROWS
+===================== */
+
+.hero-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+
+  z-index:10;
+
+  width:48px;
+  height:48px;
+
+  border-radius:50%;
+  border:1px solid rgba(214,176,106,0.4);
+
+  background:rgba(0,0,0,0.55);
+
+  color:#fff;
+  font-size:36px;
+
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:0.25s ease;
+}
+
+.hero-btn:hover{
+  background:rgba(214,176,106,0.18);
+  border-color:#d6b06a;
+  transform:translateY(-50%) scale(1.08);
+}
+
+.hero-btn.left{ left:18px; }
+.hero-btn.right{ right:18px; }
+
+/* =====================
+   DOTS
+===================== */
+
+.hero-dots{
+  position:absolute;
+  bottom:22px;
+  left:50%;
+  transform:translateX(-50%);
+
+  display:flex;
+  gap:10px;
+
+  z-index:10;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+
+  border-radius:50%;
+  background:rgba(255,255,255,0.35);
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.dot.active{
+  background:#d4af37;
+  transform:scale(1.2);
+}
+/* =====================
+   BUTTON SYSTEM（🔥重點修正）
+===================== */
+
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:999px;
+
+  text-decoration:none;
+  font-weight:500;
+
+  transition:0.3s ease;
+  cursor:pointer;
+}
+
+/* 主金色按鈕 */
+.btn.gold{
+  background:var(--gold);
+  color:#1a1410;
+  border:1px solid rgba(255,255,255,0.12);
+  margin-top:20px;
+}
+
+/* hover 效果（你原本缺這個） */
+.btn.gold:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(214,176,106,0.35);
+}
+
+/* =====================
+   MENU SECTION
+===================== */
+
+.menu-section{
+  padding:100px 10%;
+  text-align:center;
+}
+
+.section-title{
+  font-size:48px;
+  color:var(--gold);
+}
+
+.section-subtitle{
+  color:var(--muted);
+  margin-bottom:50px;
+}
+.menu-poster-section{
+    padding:120px 10%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+}
+
+.poster-text{
+    flex:1;
+    min-width:320px;
+}
+
+.poster-tag{
+    color:var(--gold);
+    letter-spacing:3px;
+    margin-bottom:10px;
+}
+
+.poster-text h2{
+    font-size:54px;
+    margin-bottom:20px;
+}
+
+.poster-text p{
+    color:var(--muted);
+    line-height:1.8;
+    max-width:500px;
+}
+
+.poster-image{
+    flex:1;
+    min-width:320px;
+}
+
+.poster-image img{
+    width:130%;
+    max-width:650px;
+
+    border-radius:24px;
+
+    border:1px solid rgba(214,176,106,0.15);
+
+    box-shadow:
+      0 20px 50px rgba(0,0,0,0.35);
+}
+
+.menu-container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+/* =====================
+   MENU CARD
+===================== */
+
+.menu-card{
+  width:320px;
+
+  background:var(--card);
+
+  border-radius:18px;
+  overflow:hidden;
+
+  border:1px solid rgba(214,176,106,0.12);
+
+  transition:0.3s;
+  display:block;
+  text-decoration:none;
+  color:inherit;
+}
+
+.menu-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(214,176,106,0.25);
+  box-shadow:0 18px 40px rgba(0,0,0,0.4);
+  transform:translateY(-6px);
+  transition:0.3s;
+}
+
+.menu-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.menu-card h3{
+  padding:15px 20px 0;
+}
+
+.menu-card p{
+  padding:0 20px;
+  color:var(--muted);
+}
+
+.menu-card span{
+  display:block;
+  padding:18px 20px;
+  color:var(--gold);
+  font-weight:bold;
+}
+
+/* =====================
+   COLLECTION
+===================== */
+
+.collection-section{
+  position:relative;
+  height:75vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea');
+
+  background-size:cover;
+  background-position:center;
+}
+
+.collection-content{
+  max-width:750px;
+}
+
+.collection-tag{
+  color:var(--gold);
+  letter-spacing:4px;
+}
+
+.collection-content h2{
+  font-size:64px;
+}
+
+.collection-description{
+  color:var(--muted);
+  line-height:1.8;
+  margin:30px 0;
+}
+
+.collection-btn{
+  display:inline-block;
+  padding:14px 34px;
+
+  border:1px solid var(--gold);
+  color:var(--gold);
+
+  border-radius:40px;
+  text-decoration:none;
+
+  transition:0.3s;
+}
+
+.collection-btn:hover{
+  background:var(--gold);
+  color:#1a1410;
+}
+
+/* =====================
+   MEMBERSHIP
+===================== */
+
+.membership-section{
+  padding:100px 10%;
+  display:flex;
+  justify-content:center;
+}
+
+.membership-box{
+  width:100%;
+  max-width:850px;
+
+  background:var(--card);
+
+  border:1px solid rgba(214,176,106,0.15);
+  border-radius:30px;
+
+  padding:70px 50px;
+
+  text-align:center;
+}
+
+/* ⭐標題：修正大小 + 顏色一致 */
+.membership-box h2{
+  font-size:52px;
+  color:var(--gold);   /* 統一主色 */
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+/* ⭐內文 */
+.membership-box p{
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+/* ⭐小標 */
+.membership-tag{
+  color:var(--muted);  /* 不要太搶主視覺 */
+  font-size:13px;
+  letter-spacing:3px;
+  margin-bottom:10px;
+}
+
+/* ⭐按鈕 */
+.membership-btn{
+  display:inline-block;
+
+  margin-top:20px;
+  padding:14px 34px;
+
+  background:var(--gold);
+  color:#1a1410;
+
+  border-radius:999px;
+  text-decoration:none;
+
+  font-weight:600;
+
+  border:1px solid rgba(255,255,255,0.12);
+
+  transition:0.3s ease;
+}
+
+/* hover效果 */
+.membership-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 25px rgba(214,176,106,0.35);
+}
+/* =====================
+   TIER
+===================== */
+
+.tier-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin-top:40px;
+}
+
+.tier-card{
+  background:var(--card);
+  padding:40px 25px;
+
+  border-radius:20px;
+
+  border:1px solid rgba(214,176,106,0.12);
+
+  transition:0.3s;
+}
+
+.tier-card:hover{
+  transform:translateY(-10px);
+  border-color:var(--gold);
+}
+
+.tier-card h3{
+  color:var(--gold);
+  font-size:28px;
+}
+
+.tier-card li{
+  color:var(--muted);
+}
+
+/* =====================
+   VIP
+===================== */
+
+.vip{
+  border:1px solid var(--gold);
+  box-shadow:0 0 20px rgba(214,176,106,0.2);
+}
+
+/* =====================
+   RWD
+===================== */
+
+@media(max-width:900px){
+
+  .tier-container{
+    grid-template-columns:1fr;
+  }
+
+  .menu-container{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .hero h2{
+    font-size:42px;
+  }
+}

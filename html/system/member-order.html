@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>訂單紀錄 | Ink墨染</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/navbar.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="../../css/member-order.css">
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo-area">
+        <img src="../../img/Logo (2).jpg" alt="logo">
+        <h1 class="logo">Ink墨染</h1>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../../index.html" class="active">首頁</a></li>
+        <li><a href="../pages/softdrink.html">酒單</a></li>
+        <li><a href="../pages/event.html">活動</a></li>
+        <li><a href="../pages/aboutus.html">品牌故事</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+        <div class="search-container">
+            <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="搜尋酒款..."
+            autocomplete="off">
+            <button class="search-button" onclick="searchProduct()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="suggestBox" class="suggest-box"></div>
+        </div>
+        <a href="#" class="team-btn">組員介紹</a>
+        <a href="login.html" class="member-btn">會員登入</a>
+        <a href="cart.html" class="cart-btn">購物車</a>
+    </div>
+</nav>
+
+<!-- HEADER -->
+<section class="order-header">
+  <h1>訂單紀錄</h1>
+  <div class="vip-badge">VIP MEMBER</div>
+</section>
+
+<!-- CONTENT -->
+<main class="member-order">
+
+  <section class="order-list" id="orderList">
+    <!-- JS render -->
+  </section>
+
+</main>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- 品牌 -->
+        <div class="footer-brand">
+            <h2>Ink墨染</h2>
+            <p>Premium Spirits Online Store</p>
+            <p class="footer-slogan">
+                Sip The Night, Taste The Story.
+            </p>
+        </div>
+
+        <!-- 快速連結 -->
+        <div class="footer-links">
+            <h3>快速連結</h3>
+            <a href="../../index.html">首頁</a>
+            <a href="../pages/softdrink.html">酒單</a>
+            <a href="../pages/event.html">活動資訊</a>
+            <a href="../pages/aboutus.html">品牌故事</a>
+        </div>
+
+        <!-- 聯絡資訊 -->
+        <div class="footer-info">
+            <h3>聯絡資訊</h3>
+            <p>📧 support@inkstore.com</p>
+            <p>📞 03-123-4567</p>
+            <p>🚚 全台快速配送</p>
+        </div>
+
+    </div>
+
+    <!-- 酒類警語 -->
+    <div class="footer-warning">
+        酒後不開車，安全有保障 ｜ 未滿十八歲禁止飲酒
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Ink墨染. All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="../../Js/product.js"></script>
+<script src="../../Js/search.js"></script>
+<script src="../../Js/cart.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("order page loaded");
+  renderOrders();
+});
+</script>
+</body>
+</html>

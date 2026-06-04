@@ -1,0 +1,208 @@
+/* =========================
+   RESET
+========================= */
+
+html, body{
+  width:100%;
+  background:#1f1915;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.order-header{
+  padding:45px 10% 20px;
+}
+
+.order-header h1{
+  font-family:'Cinzel', serif;
+  font-size:42px;
+  color:#d6b06a;
+}
+
+.vip-badge{
+  display:inline-block;
+  margin-top:10px;
+
+  padding:6px 14px;
+  border-radius:20px;
+
+  background:rgba(214,176,106,0.12);
+  border:1px solid rgba(214,176,106,0.4);
+
+  color:#d6b06a;
+  font-size:13px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.member-order{
+  padding:40px 10% 60px;
+}
+
+/* 🧾 外層背景卡片 */
+.order-card{
+  background:#2a211c;
+  border:1px solid rgba(214,176,106,0.15);
+  border-radius:16px;
+
+  padding:18px;
+  margin-bottom:18px;
+
+  transition:0.25s;
+}
+
+.order-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(214,176,106,0.35);
+}
+
+/* =======================
+   HEADER（訂單資訊列）
+======================= */
+
+.order-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+
+  margin-bottom:14px;
+}
+
+.order-id{
+  font-size:14px;
+  color:#d6b06a;
+  font-weight:bold;
+}
+
+.order-time{
+  font-size:12px;
+  color:#aaa;
+  margin-top:4px;
+}
+
+/* 狀態標籤 */
+.order-status{
+  background:rgba(214,176,106,0.12);
+  color:#d6b06a;
+
+  padding:4px 10px;
+  border-radius:999px;
+
+  font-size:12px;
+}
+
+/* =======================
+   商品列表（像蝦皮）
+======================= */
+
+.order-items{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.order-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:10px;
+  border-radius:12px;
+
+  background:rgba(255,255,255,0.03);
+}
+
+.order-item img{
+  width:50px;
+  height:50px;
+  object-fit:cover;
+
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* 商品資訊 */
+.order-info{
+  flex:1;
+}
+
+.order-info .name{
+  color:#fff;
+  font-size:14px;
+}
+
+.order-info .qty{
+  font-size:12px;
+  color:#aaa;
+  margin-top:3px;
+}
+
+/* 價格 */
+.order-item .price{
+  color:#d6b06a;
+  font-weight:bold;
+}
+
+/* =======================
+   FOOTER（總金額列）
+======================= */
+/* 訂單總金額 */
+.order-total{
+    margin-top: 20px;
+
+    padding: 18px 24px;
+
+    background: rgba(214,176,106,0.08);
+
+    border: 1px solid rgba(214,176,106,0.25);
+    border-radius: 12px;
+
+    text-align: right;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    color: #d6b06a;
+
+    letter-spacing: 1px;
+}
+.order-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top:14px;
+  padding-top:12px;
+
+  border-top:1px solid rgba(255,255,255,0.08);
+
+  color:#fff;
+}
+
+.order-bottom b{
+  color:#d6b06a;
+  font-size:16px;
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  width:100%;
+  display:block;
+
+  background:linear-gradient(180deg,#2a211c,#1f1915);
+  padding:70px 10% 30px;
+
+  box-sizing:border-box;
+  margin-top:auto;
+}

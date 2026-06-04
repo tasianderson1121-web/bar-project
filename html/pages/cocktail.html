@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Classic Cocktails</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/navbar.css">
+<link rel="stylesheet" href="../../css/softdrink.css">
+<link rel="stylesheet" href="../../css/footer.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo-area">
+        <img src="../../img/Logo (2).jpg" alt="logo">
+        <h1 class="logo">Ink墨染</h1>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../../index.html" class="active">首頁</a></li>
+        <li><a href="softdrink.html">酒單</a></li>
+        <li><a href="event.html">活動</a></li>
+        <li><a href="aboutus.html">品牌故事</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+        <div class="search-container">
+            <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="搜尋酒款..."
+            autocomplete="off">
+            <button class="search-button" onclick="searchProduct()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="suggestBox" class="suggest-box"></div>
+        </div>
+        <a href="#" class="team-btn">組員介紹</a>
+        <a href="../system/login.html" class="member-btn">會員登入</a>
+        <a href="../system/cart.html" class="cart-btn">購物車</a>
+    </div>
+</nav>
+<!-- HERO -->
+<header class="menu-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Classic Cocktails</h1>
+        <p>Signature cocktails crafted for the night</p>
+    </div>
+
+</header>
+
+<!-- CATEGORY -->
+<section class="category-bar">
+
+    <a href="softdrink.html" class="category">軟性飲料</a>
+
+    <a href="beer.html" class="category">啤酒</a>
+
+    <a href="spirit.html" class="category">基酒</a>
+
+    <a href="spirit.html" class="category">烈酒</a>
+
+    <a href="cocktail.html" class="category active">經典調酒</a>
+
+</section>
+
+<section class="grid">
+
+  <!-- Mojito -->
+  <a class="card" href="../cocktail/mojito.html">
+
+    <img src="../../img/mojito.jpg">
+
+    <div class="card-content">
+
+      <h3>Mojito</h3>
+
+      <p>白蘭姆、薄荷與萊姆完美融合，帶來清爽俐落的夏日口感。</p>
+
+      <div class="product-bottom">
+        <span>$320</span>
+      </div>
+
+    </div>
+
+  </a>
+
+  <!-- Negroni -->
+  <a class="card" href="../cocktail/negroni.html">
+
+    <img src="../../img/negroni.jpg">
+
+    <div class="card-content">
+
+      <h3>Negroni</h3>
+
+      <p>琴酒與苦艾酒交織出成熟風味，帶有迷人的微苦尾韻。</p>
+
+      <div class="product-bottom">
+        <span>$360</span>
+      </div>
+
+    </div>
+
+  </a>
+
+  <!-- Old Fashioned -->
+  <a class="card" href="../cocktail/old-fashion.html">
+
+    <img src="../../img/old-fashion.jpg">
+
+    <div class="card-content">
+
+      <h3>Old Fashioned</h3>
+
+      <p>波本威士忌搭配苦精與橙香，呈現經典紳士風格。</p>
+
+      <div class="product-bottom">
+        <span>$380</span>
+      </div>
+
+    </div>
+
+  </a>
+
+  <!-- Martini -->
+  <a class="card" href="../cocktail/martini.html">
+
+    <img src="https://images.unsplash.com/photo-1575023782549-62ca0d244b39?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="card-content">
+
+      <h3>Martini</h3>
+
+      <p>純粹琴酒香氣與俐落口感，展現高級酒吧經典魅力。</p>
+
+      <div class="product-bottom">
+        <span>$400</span>
+      </div>
+
+    </div>
+
+  </a>
+
+  <!-- Margarita -->
+  <a class="card" href="../cocktail/margarita.html">
+
+    <img src="../../img/margarita.jpg">
+
+    <div class="card-content">
+
+      <h3>Margarita</h3>
+
+      <p>龍舌蘭與柑橘酸香融合，帶來熱情奔放的風味體驗。</p>
+
+      <div class="product-bottom">
+        <span>$350</span>
+      </div>
+
+    </div>
+
+  </a>
+
+  <!-- Sex on the Beach -->
+  <a class="card" href="../cocktail/sex-on-the-beach.html">
+
+    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=1200&auto=format&fit=crop">
+
+    <div class="card-content">
+
+      <h3>Sex on the Beach</h3>
+
+      <p>伏特加融合果香與橙味，甜美滑順的熱帶風味調酒。</p>
+
+      <div class="product-bottom">
+        <span>$340</span>
+      </div>
+
+    </div>
+
+  </a>
+
+  <!-- Whisky Sour -->
+  <a class="card" href="../cocktail/whisky-sour.html">
+
+    <img src="../../img/whisky-sour.jpg">
+
+    <div class="card-content">
+
+      <h3>Whisky Sour</h3>
+
+      <p>威士忌搭配檸檬酸香，呈現酸甜平衡的經典風味。</p>
+
+      <div class="product-bottom">
+        <span>$350</span>
+      </div>
+
+    </div>
+
+  </a>
+
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- 品牌 -->
+        <div class="footer-brand">
+            <h2>Ink墨染</h2>
+            <p>Premium Spirits Online Store</p>
+            <p class="footer-slogan">
+                Sip The Night, Taste The Story.
+            </p>
+        </div>
+
+        <!-- 快速連結 -->
+        <div class="footer-links">
+            <h3>快速連結</h3>
+            <a href="../../index.html">首頁</a>
+            <a href="cocktail.html">酒單</a>
+            <a href="event.html">活動資訊</a>
+            <a href="aboutus.html">品牌故事</a>
+        </div>
+
+        <!-- 聯絡資訊 -->
+        <div class="footer-info">
+            <h3>聯絡資訊</h3>
+            <p>📧 support@inkstore.com</p>
+            <p>📞 03-123-4567</p>
+            <p>🚚 全台快速配送</p>
+        </div>
+
+    </div>
+
+    <!-- 酒類警語 -->
+    <div class="footer-warning">
+        酒後不開車，安全有保障 ｜ 未滿十八歲禁止飲酒
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Ink墨染. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="../../Js/user.js"></script>
+<script src="../../Js/auth.js"></script>
+
+<script src="../../Js/product.js"></script>
+<script src="../../Js/search.js"></script>
+
+<script src="../../Js/navbar.js"></script>
+</body>
+</html>

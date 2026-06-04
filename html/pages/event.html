@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>活動 | Ink墨染</title>
+
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/navbar.css">
+<link rel="stylesheet" href="../../css/footer.css">
+<link rel="stylesheet" href="../../css/event.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo-area">
+        <img src="../../img/Logo (2).jpg" alt="logo">
+        <h1 class="logo">Ink墨染</h1>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../../index.html" class="active">首頁</a></li>
+        <li><a href="softdrink.html">酒單</a></li>
+        <li><a href="event.html">活動</a></li>
+        <li><a href="aboutus.html">品牌故事</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+        <div class="search-container">
+            <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="搜尋酒款..."
+            autocomplete="off">
+            <button class="search-button" onclick="searchProduct()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="suggestBox" class="suggest-box"></div>
+        </div>
+        <a href="#" class="team-btn">組員介紹</a>
+        <a href="../system/login.html" class="member-btn">會員登入</a>
+        <a href="../system/cart.html" class="cart-btn">購物車</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="event-hero">
+
+  <img src="../../img/event.png" class="hero-bg">
+
+  <div class="overlay"></div>
+
+</header>
+<!-- EVENTS -->
+<section class="event-section">
+
+  <div class="event-card">
+
+    <img src="../../img/event1.png">
+
+    <div class="event-info">
+      <h3>Happy Hour</h3>
+      <p>18:00 - 21:00 全品項第二杯半價</p>
+      <button>立即參加</button>
+    </div>
+
+  </div>
+
+  <div class="event-card">
+
+    <img src="../../img/event2.png">
+
+    <div class="event-info">
+      <h3>新會員優惠</h3>
+      <p>註冊即送 $100 折扣券</p>
+      <button>立即領取</button>
+    </div>
+
+  </div>
+
+  <div class="event-card">
+
+    <img src="../../img/event3.png">
+
+    <div class="event-info">
+      <h3>調酒組合套餐</h3>
+      <p>任選三款調酒現折 15%</p>
+      <a href="../pages/softdrink.html" button>查看商品</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- 品牌 -->
+        <div class="footer-brand">
+            <h2>Ink墨染</h2>
+            <p>Premium Spirits Online Store</p>
+            <p class="footer-slogan">
+                Sip The Night, Taste The Story.
+            </p>
+        </div>
+
+        <!-- 快速連結 -->
+        <div class="footer-links">
+            <h3>快速連結</h3>
+            <a href="../../index.html">首頁</a>
+            <a href="cocktail.html">酒單</a>
+            <a href="event.html">活動資訊</a>
+            <a href="aboutus.html">品牌故事</a>
+        </div>
+
+        <!-- 聯絡資訊 -->
+        <div class="footer-info">
+            <h3>聯絡資訊</h3>
+            <p>📧 support@inkstore.com</p>
+            <p>📞 03-123-4567</p>
+            <p>🚚 全台快速配送</p>
+        </div>
+
+    </div>
+
+    <!-- 酒類警語 -->
+    <div class="footer-warning">
+        酒後不開車，安全有保障 ｜ 未滿十八歲禁止飲酒
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Ink墨染. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="../../Js/user.js"></script>
+<script src="../../Js/auth.js"></script>
+
+<script src="../../Js/product.js"></script>
+<script src="../../Js/search.js"></script>
+
+<script src="../../Js/navbar.js"></script>
+</body>
+</html>

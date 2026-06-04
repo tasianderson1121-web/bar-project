@@ -1,0 +1,173 @@
+/* =========================
+   FOOTER BASE
+========================= */
+
+.footer{
+  background:linear-gradient(180deg,#2a211c,#1f1915);
+  border-top:1px solid rgba(214,176,106,0.18);
+
+  padding:70px 10% 30px;
+
+  color:#c8b8a8;
+
+  width:100%;
+  box-sizing:border-box;
+}
+
+/* =========================
+   FOOTER CONTAINER
+========================= */
+
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:80px;
+
+  flex-wrap:wrap;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-brand{
+  flex:1;
+  min-width:250px;
+}
+
+.footer-brand h2{
+  color:#d6b06a;
+  font-size:24px;
+  margin-bottom:12px;
+}
+
+.footer-brand p{
+  line-height:1.8;
+}
+
+.footer-slogan{
+  margin-top:12px;
+
+  color:#8e7d6d;
+
+  font-size:14px;
+  font-style:italic;
+
+  letter-spacing:1px;
+}
+
+/* =========================
+   LINKS + INFO
+========================= */
+
+.footer-links,
+.footer-info{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+
+  min-width:180px;
+}
+
+.footer-links h3,
+.footer-info h3{
+  color:#d6b06a;
+  font-size:16px;
+  margin-bottom:10px;
+}
+
+.footer-links a{
+  color:#c8b8a8;
+  text-decoration:none;
+
+  transition:.3s;
+}
+
+.footer-links a:hover{
+  color:#d6b06a;
+  transform:translateX(4px);
+}
+
+.footer-info p{
+  color:#c8b8a8;
+  font-size:14px;
+
+  transition:.3s;
+}
+
+.footer-info p:hover{
+  color:#d6b06a;
+}
+
+/* =========================
+   WARNING
+========================= */
+
+.footer-warning{
+  margin-top:40px;
+
+  padding-top:20px;
+
+  text-align:center;
+
+  border-top:1px solid rgba(214,176,106,0.12);
+
+  color:#d6b06a;
+
+  font-size:20px;
+  letter-spacing:1px;
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-bottom{
+  text-align:center;
+
+  margin-top:20px;
+
+  font-size:13px;
+  color:#7a6a5a;
+}
+
+/* =========================
+   防止被其他 layout 影響
+========================= */
+
+footer{
+  width:100%;
+  display:block;
+}
+
+/* =========================
+   RWD
+========================= */
+
+@media (max-width:900px){
+
+  .footer{
+    padding:60px 8% 25px;
+  }
+
+  .footer-container{
+    flex-direction:column;
+    gap:40px;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-info{
+    width:100%;
+  }
+
+  .footer-links a:hover{
+    transform:none;
+  }
+
+  .footer-warning{
+    font-size:12px;
+    line-height:1.8;
+  }
+}

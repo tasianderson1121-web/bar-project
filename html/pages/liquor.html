@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Ink墨染</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/base.css">
+<link rel="stylesheet" href="../../css/navbar.css">
+<link rel="stylesheet" href="../../css/softdrink.css">
+<link rel="stylesheet" href="../../css/footer.css">
+</head>
+
+<body>
+
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo-area">
+        <img src="../../img/Logo (2).jpg" alt="logo">
+        <h1 class="logo">Ink墨染</h1>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="../../index.html" class="active">首頁</a></li>
+        <li><a href="softdrink.html">酒單</a></li>
+        <li><a href="event.html">活動</a></li>
+        <li><a href="aboutus.html">品牌故事</a></li>
+    </ul>
+    
+    <div class="nav-actions">
+        <div class="search-container">
+            <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="搜尋酒款..."
+            autocomplete="off">
+            <button class="search-button" onclick="searchProduct()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <div id="suggestBox" class="suggest-box"></div>
+        </div>
+        <a href="#" class="team-btn">組員介紹</a>
+        <a href="../system/login.html" class="member-btn">會員登入</a>
+        <a href="../system/cart.html" class="cart-btn">購物車</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="menu-hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Premium Spirits</h1>
+    <p>Explore premium selections curated for every occasion.</p>
+  </div>
+</header>
+
+<!-- CATEGORY -->
+<section class="category-bar">
+
+  <a href="softdrink.html" class="category ">
+    軟性飲料
+  </a>
+
+  <a href="beer.html" class="category">
+    啤酒
+  </a>
+
+  <a href="spirit.html" class="category ">
+    基酒
+  </a>
+
+  <a href="liquor.html" class="category active">
+    烈酒
+  </a>
+
+  <a href="cocktail.html" class="category">
+    經典調酒
+  </a>
+  
+</section>
+
+<section class="grid">
+
+  <!-- House Shots -->
+  <a class="card" href="../liquor/house-shot.html">
+    <img src="../../img/shot.jpg">
+    <div class="card-content">
+      <h3>House Shots</h3>
+      <p>店內精選烈酒 Shot，適合派對與快速飲用。</p>
+      <div class="product-bottom"><span>$180</span></div>
+    </div>
+  </a>
+
+  <!-- Jager Bomb -->
+  <a class="card" href="../liquor/jager-bomb.html">
+    <img src="../../img/jager-bomb2.jpg">
+    <div class="card-content">
+      <h3>Jäger Bomb</h3>
+      <p>能量飲與烈酒結合，刺激感十足的派對經典。</p>
+      <div class="product-bottom"><span>$220</span></div>
+    </div>
+  </a>
+
+  <!-- B52 -->
+  <a class="card" href="../liquor/B52-shot.html">
+    <img src="../../img/B52-shot.jpg">
+    <div class="card-content">
+      <h3>B52 Shot</h3>
+      <p>分層烈酒 shot，視覺與味覺雙重衝擊。</p>
+      <div class="product-bottom"><span>$250</span></div>
+    </div>
+  </a>
+  <!-- Absolut Shot -->
+<a class="card" href="../liquor/absolute-shot.html">
+  <img src="../../img/absolute-shot.webp">
+  <div class="card-content">
+    <h3>Absolut Shot</h3>
+    <p>伏特加純飲 shot，乾淨俐落、入口強烈。</p>
+    <div class="product-bottom"><span>$200</span></div>
+  </div>
+</a>
+
+<!-- Tequila Shot -->
+<a class="card" href="../liquor/tequila-shot.html">
+  <img src="../../img/tequila-shot.jpg">
+  <div class="card-content">
+    <h3>Tequila Shot</h3>
+    <p>龍舌蘭經典 shot，刺激感強烈帶柑橘尾韻。</p>
+    <div class="product-bottom"><span>$230</span></div>
+  </div>
+</a>
+
+<!-- Black Label Shot -->
+<a class="card" href="../liquor/black-label.html">
+  <img src="../../img/black-label.jpg">
+  <div class="card-content">
+    <h3>Black Label Shot</h3>
+    <p>威士忌純飲，煙燻與木質香氣濃厚。</p>
+    <div class="product-bottom"><span>$260</span></div>
+  </div>
+</a>
+
+</section>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+
+        <!-- 品牌 -->
+        <div class="footer-brand">
+            <h2>Ink墨染</h2>
+            <p>Premium Spirits Online Store</p>
+            <p class="footer-slogan">
+                Sip The Night, Taste The Story.
+            </p>
+        </div>
+
+        <!-- 快速連結 -->
+        <div class="footer-links">
+            <h3>快速連結</h3>
+            <a href="../../index.html">首頁</a>
+            <a href="liquor.html">酒單</a>
+            <a href="event.html">活動資訊</a>
+            <a href="aboutus.html">品牌故事</a>
+        </div>
+
+        <!-- 聯絡資訊 -->
+        <div class="footer-info">
+            <h3>聯絡資訊</h3>
+            <p>📧 support@inkstore.com</p>
+            <p>📞 03-123-4567</p>
+            <p>🚚 全台快速配送</p>
+        </div>
+
+    </div>
+
+    <!-- 酒類警語 -->
+    <div class="footer-warning">
+        酒後不開車，安全有保障 ｜ 未滿十八歲禁止飲酒
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Ink墨染. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script src="../../Js/user.js"></script>
+<script src="../../Js/auth.js"></script>
+
+<script src="../../Js/product.js"></script>
+<script src="../../Js/search.js"></script>
+
+<script src="../../Js/navbar.js"></script>
+</body>
+</html>

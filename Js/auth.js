@@ -1,25 +1,30 @@
 function getCurrentUser() {
     try {
-        return JSON.parse(localStorage.getItem("currentUser")) || null;
+        const user = JSON.parse(localStorage.getItem("currentUser"));
+        return user && user.email ? user : null;
     } catch (e) {
         return null;
     }
 }
 
+/* ⭐ 強制同步用（關鍵） */
 function setCurrentUser(user) {
+    if (!user || !user.email) return;
     localStorage.setItem("currentUser", JSON.stringify(user));
 }
 
-/* 🔥 登出（穩定路徑版） */
+/* ⭐ 防止「假登出」 */
+function ensureAuth() {
+    const user = getCurrentUser();
+    if (!user) {
+        localStorage.removeItem("currentUser");
+        return false;
+    }
+    return true;
+}
 function logout() {
+
     localStorage.removeItem("currentUser");
 
-    const path = window.location.pathname;
-
-    // 根據目前位置決定跳轉
-    if (path.includes("/system/")) {
-        window.location.href = "login.html";
-    } else {
-        window.location.href = "html/system/login.html";
-    }
+    window.location.href = "login.html";
 }

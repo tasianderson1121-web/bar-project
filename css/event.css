@@ -145,7 +145,23 @@
 
   transition:0.2s;
 }
+.event-btn{
+    display:inline-block;
+    padding:10px 20px;
 
+    background:#d6b06a;
+    color:#111;
+
+    text-decoration:none;
+    border-radius:8px;
+
+    font-weight:600;
+    transition:.3s;
+}
+
+.event-btn:hover{
+    transform:translateY(-2px);
+}
 .event-info button:hover{
   transform:scale(1.05);
   background:#e0bc74;
